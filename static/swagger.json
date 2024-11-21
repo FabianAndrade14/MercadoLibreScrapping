@@ -1,0 +1,44 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "MercadoLibre Scraper API",
+      "description": "API para realizar scraping de listas de MercadoLibre y guardar en Firebase.",
+      "version": "1.0.0"
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+      "/api/scrape": {
+        "post": {
+          "summary": "Realiza scraping de MercadoLibre",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "example": "https://www.mercadolibre.com.co/listado_ejemplo"
+                  }
+                },
+                "required": ["url"]
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Datos guardados exitosamente."
+            },
+            "400": {
+              "description": "Error en los datos proporcionados o en el scraping."
+            }
+          }
+        }
+      }
+    }
+  }
+  
