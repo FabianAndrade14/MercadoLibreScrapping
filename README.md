@@ -6,3 +6,5 @@ Hi! i'm Fabian, i hope you are doinggreat today. In this readme i want to give y
 python -m venv environment_name
 ```
 replace the _environment_name_ for the name you want to give it to the virtual environment.
+
+2. **Replace the links of firebase for your own key** If you odwnload this prject, you need to replace the links in the right order, starting with the firebase connection.
